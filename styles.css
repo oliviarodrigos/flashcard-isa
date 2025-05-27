@@ -1,0 +1,18 @@
+body {
+    background-color: mediumpurple;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+footer {
+    background-color: hotpink;
+    color: rgb(0, 0, 0);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    text-align: center;
+    font-size: 0.7rem;
+    margin-top: 0.5rem;
+}
