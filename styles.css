@@ -1,5 +1,5 @@
 body {
-    background-color: mediumpurple;
+    background-image: linear-gradient(purple, lightblue );
     font-family: 'Times New Roman', Times, serif;
 }
 
@@ -10,7 +10,7 @@ display: flex;
 
 .cartao {
         margin: 1rem 1rem;
-        background-color: lightpink;
+        background-color: lightblue;
         height: 13em;
         flex-grow: 1;
         flex-basis: calc(33% - 6rem);
@@ -20,20 +20,50 @@ display: flex;
         text-align: center;
         background-color: mistyrose;
         height: 100%;
+        transform-style: preserve-3d;
+        transition: transform 300ms ease-in-out;
 
     }
 
     .cartao__conteudo h3 {
-        background-color: blueviolet;
+        background-color: cadetblue;
+        border: 3px solid lightblue;
         position: absolute;
         margin: 0.6rem;
         border-radius: 0.4rem;
         font-size: 1vw;
+        backface-visibility: hidden;
     }
 
+    .cartao__conteudo__pergunta p {
+        color: purple;
+        font-weight: 500;
+        margin-top: 5rem;
+    }
+
+    .cartao__conteudo__resposta p {
+        color: black;
+        font-weight: 700;
+    }
+
+.cartao:hover .cartao__conteudo {
+    transform: rotateY(180deg);
+}
+
+.cartao__conteudo__pergunta,
+.cartao__conteudo__resposta {
+    backface-visibility: hidden;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.cartao__conteudo__resposta {
+    transform: rotateY(180deg);
+}
 
 footer {
-    background-color: hotpink;
+    background-color: purple;
     color: rgb(0, 0, 0);
     position: fixed;
     bottom: 0;
